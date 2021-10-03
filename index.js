@@ -85,7 +85,7 @@ const antecessoresVertice = (grafo, id) => {
 
 const entradaIdVerticeGrau = async (textoEntrada, grafo) => {
   rl.question(textoEntrada || "Entrada: ", (answer) => {
-    console.log(grafo?.vertices[String(Number(answer)-1)]?.grau || "Não foi possível calcular");
+    console.log(grafo?.vertices[String(Number(answer)-1)]?.grau || "Não foi encontrado");
     menu(grafo);
   });
 };
