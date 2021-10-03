@@ -129,7 +129,7 @@ const listMenu = () => {
   console.log("2. Grau do vértice");
   console.log("3. Sucessores");
   console.log("4. Antecessores");
-  console.log("5. Grafo completo");
+  console.log("5. Log completo");
   console.log("0. Sair");
   console.log("-----------------");
 };
