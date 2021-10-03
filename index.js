@@ -85,7 +85,7 @@ const antecessoresVertice = (grafo, id) => {
 
 const entradaIdVerticeGrau = async (textoEntrada, grafo) => {
   rl.question(textoEntrada || "Entrada: ", (answer) => {
-    console.log(grafo?.vertices[answer]?.grau || "Não foi possível calcular");
+    console.log(grafo?.vertices[String(Number(answer)-1)]?.grau || "Não foi possível calcular");
     menu(grafo);
   });
 };
@@ -93,9 +93,9 @@ const entradaIdVerticeGrau = async (textoEntrada, grafo) => {
 const entradaIdVerticeSucessores = async (textoEntrada, grafo) => {
   rl.question(textoEntrada || "Entrada: ", (answer) => {
     console.log(
-      grafo?.vertices[answer]?.sucessores?.length === 0
+      grafo?.vertices[String(Number(answer)-1)]?.sucessores?.length === 0
         ? "Nenhum sucessor"
-        : grafo.vertices[answer].sucessores
+        : grafo.vertices[String(Number(answer)-1)].sucessores
     );
     menu(grafo);
   });
@@ -104,9 +104,9 @@ const entradaIdVerticeSucessores = async (textoEntrada, grafo) => {
 const entradaIdVerticeAntecessores = async (textoEntrada, grafo) => {
   rl.question(textoEntrada || "Entrada: ", (answer) => {
     console.log(
-      grafo?.vertices[answer]?.antecessores?.length === 0
+      grafo?.vertices[String(Number(answer)-1)]?.antecessores?.length === 0
         ? "Nenhum antecessor"
-        : grafo.vertices[answer].antecessores
+        : grafo.vertices[String(Number(answer)-1)].antecessores
     );
     menu(grafo);
   });
